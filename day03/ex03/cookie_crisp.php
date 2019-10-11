@@ -12,7 +12,7 @@
 			break;
 		}
 		case "del" :
-		if($_GET['name']){
+		if($_GET['name'] && !$_GET['value']){
 			setcookie($_GET['name'],'',time() - 3600,"/");
 			break;
 		}
